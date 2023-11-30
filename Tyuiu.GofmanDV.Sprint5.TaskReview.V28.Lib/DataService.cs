@@ -27,7 +27,11 @@ namespace Tyuiu.GofmanDV.Sprint5.TaskReview.V28.Lib
                 string line;
                 while ((line = reader.ReadLine()) != null)
                 {
-                    strLine = strLine.Replace("  ", " ");
+                    for (int i = 0; i < line.Length; i++)
+                    {
+                        strLine = strLine.Replace("  ", " ");
+                    }
+
                     File.AppendAllText(pathSaveFile, strLine + Environment.NewLine);
                     strLine = "";
                 }
